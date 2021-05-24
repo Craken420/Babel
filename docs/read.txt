@@ -1,0 +1,10 @@
+Steps:
+    npm install @babel/core @babel/cli --save-dev,
+    npm install @babel/preset-env --save-dev
+    archivo .babelrc: {"presets": ["@babel/preset-env"]}
+    .\node_modules\.bin\babel.cmd before.js -o after.js
+    Añadirlo en package:
+        "scripts":
+            "babel": "./node_modules/.bin/babel.cmd ./src/index.js -o ./dist/assets/bundle.js"
+    watch for changes (-w):
+        "babel": "./node_modules/.bin/babel.cmd ./src/index.js -w -o ./dist/assets/bundle.js"

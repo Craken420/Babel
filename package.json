@@ -1,0 +1,19 @@
+{
+  "name": "Babel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel src/index.js -o dist/bundle.js",
+    "module": "babel src/dom.js -o dist/dom.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2"
+  },
+  "dependencies": {}
+}
