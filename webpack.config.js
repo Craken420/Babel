@@ -9,7 +9,7 @@ const webpackInitConfig = {
         app: ['@babel/polyfill', './src/index.js'],
     },
     resolve: {
-        extensions: ['.js']
+        extensions: ['.js', '.ts']
     },
     mode: 'production',
     output: {
@@ -24,6 +24,11 @@ const webpackInitConfig = {
                 test: /\.js/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
+            },
+            {
+                test: /\.ts/,
+                exclude: /node_modules/,
+                use: ['ts-loader']
             }
         ]
     },

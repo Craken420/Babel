@@ -6,7 +6,9 @@
   "scripts": {
     "babel": "babel src/index.js -o dist/bundle.js",
     "module": "babel src/dom.js -o dist/dom.js",
-    "build": "webpack --config=webpack.config.js"
+    "build": "webpack -p",
+    "dev": "webpack-dev-server --inline --hot",
+    "test": "karma start"
   },
   "keywords": [],
   "author": "",
@@ -16,10 +18,19 @@
     "@babel/core": "^7.14.3",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.14.2",
+    "@types/jasmine": "^3.7.4",
     "babel-loader": "^8.2.2",
     "html-webpack-plugin": "^5.3.1",
+    "jasmine-core": "^3.7.1",
+    "karma": "^6.3.2",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^4.0.1",
+    "karma-webpack": "^5.0.0",
+    "ts-loader": "^9.2.2",
+    "typescript": "^4.2.4",
     "webpack": "^5.37.1",
-    "webpack-cli": "^4.7.0"
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {}
 }
