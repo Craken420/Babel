@@ -17,3 +17,7 @@ Steps:
     npm install tsc-init -g
     npm i -D ts-loader
     tsc-init
+
+    npm i eslint -g
+    npm i -D eslint-loader
+    eslint --init
