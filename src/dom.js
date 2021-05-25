@@ -1,11 +1,11 @@
-console.log('I am coming from the dom.js file');
+alert('I am coming from the dom.js file');
 
 const styleBody = () => {
-    console.log('styleBody!!!');
+    alert('styleBody!!!');
 };
 
 const addTitle = text => {
-    console.log(text);
+    alert(text);
 };
 
 export { styleBody, addTitle };

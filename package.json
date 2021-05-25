@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "babel": "babel src/index.js -o dist/bundle.js",
-    "module": "babel src/dom.js -o dist/dom.js"
+    "module": "babel src/dom.js -o dist/dom.js",
+    "build": "webpack --config=webpack.config.js"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +14,10 @@
   "devDependencies": {
     "@babel/cli": "^7.14.3",
     "@babel/core": "^7.14.3",
-    "@babel/preset-env": "^7.14.2"
+    "@babel/preset-env": "^7.14.2",
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
   },
   "dependencies": {}
 }
