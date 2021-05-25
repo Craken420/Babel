@@ -5,14 +5,28 @@ const indexInput = './src/index.html';
 const indexOutput = 'index.html';
 
 const webpackInitConfig = {
-    entry: './src/index.js',
-    mode: 'development',
+    entry: {
+        app: ['@babel/polyfill', './src/index.js'],
+    },
+    resolve: {
+        extensions: ['.js']
+    },
+    mode: 'production',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[chunkhash][name].js',
         clean: true
     },
     devtool: 'inline-source-map',
+    module: {
+        rules: [
+            {
+                test: /\.js/,
+                exclude: /node_modules/,
+                use: ['babel-loader']
+            }
+        ]
+    },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Development',
