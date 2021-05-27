@@ -8,12 +8,12 @@ Steps:
             "babel": "./node_modules/.bin/babel.cmd ./src/index.js -o ./dist/assets/bundle.js"
     watch for changes (-w):
         "babel": "./node_modules/.bin/babel.cmd ./src/index.js -w -o ./dist/assets/bundle.js"
-    
+
     npm i -D babel-loader
     npm i -D @babel/polyfill
     crear archivo: .babelrc
 
-    npm i -g typescript 
+    npm i -g typescript
     npm install tsc-init -g
     npm i -D ts-loader
     tsc-init
@@ -21,3 +21,7 @@ Steps:
     npm i eslint -g
     npm i -D eslint-loader
     eslint --init
+
+    npm i css-loader style-loader -D
+    npm i -D postcss-cssnext postcss-loader
+    
