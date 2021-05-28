@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "lib": [
-      "dom",
-      "es2015.promise",
-      "es5"
+    "target": "es5", // nivel de lenguaje de salida
+    "module": "commonjs", // método de generación de código del módulo
+    "strict": true, // use strict
+    "esModuleInterop": true, // permite usar los import
+    "skipLibCheck": true, // Omitir verificación de tipo en archivos de declaración
+    "forceConsistentCasingInFileNames": true, // Forzar mayúsculas y minúsculas coherentes en nombres de archivo
+    "lib": [ // incluir definiciones de tipo para las API JS integradas
+      "dom", // Definiciones DOM: ventana, documento, etc
+      "es2015", // API de ES2015 (ES6): array.find, Promise, Proxy, Symbol, Map, Set, Reflect, etc.
+      "es5", // funciones de ES3 y ES5
     ]
   }
 }

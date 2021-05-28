@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "babel": "babel src/index.js -o dist/bundle.js",
+    "ts": "tsc src/index.ts",
     "module": "babel src/dom.js -o dist/dom.js",
-    "build": "webpack -p",
+    "build": "webpack --config webpack.config.js",
     "dev": "webpack-dev-server --inline --hot",
     "test": "karma start"
   },

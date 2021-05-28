@@ -6,7 +6,7 @@ const indexOutput = 'index.html';
 
 const webpackInitConfig = {
     entry: {
-        app: ['@babel/polyfill', './src/index.js'],
+        app: ['@babel/polyfill', './src/index.ts'],
     },
     resolve: {
         extensions: ['.js', '.ts']
