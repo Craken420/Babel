@@ -1,4 +1,5 @@
 import { styleBody, addTitle } from './dom';
+import './style.less'
 
 const greet = (name: string) => {
     let nam = name;

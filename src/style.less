@@ -1,0 +1,117 @@
+@variables: "./variables.less";
+@import "@{variables}";
+
+// Usage
+h1 {
+  color: @link-color;
+}
+h1:hover {
+  color: @link-color-hover;
+}
+
+// ------------------------------------------------
+// Interpolacion
+// ------------------------------------------------
+// Usage
+.@{my-selector} {
+  font-weight: bold;
+  line-height: 40px;
+  margin: 0 auto;
+}
+
+.widget {
+  @{property}: #0ee;
+  background-@{property}: #999;
+}
+
+.section {
+    @color: primary;
+    padding: 30px;
+    background-color: brown;
+    .element {
+      color: @@color;
+    }
+}
+
+.lazy-eval {
+    width: @var;
+    @color: primary;
+}
+  
+@var: @a;
+@a: 9%;
+
+// MIXIN
+.a, #b {
+    color: red;
+}
+.mixin-class1 {
+    .a(); // color: red;
+}
+.mixin-id {
+    #b();
+}
+
+.my-hover-mixin() {
+    &:hover {
+      border: 10px solid red;
+    }
+}
+button {
+    .my-hover-mixin();
+}
+/* OUTPUT:
+    button:hover {
+        border: 1px solid red;
+    }
+*/
+
+#outer() {
+    .inner {
+      color: red;
+    }
+}
+
+.c {
+    #outer.inner();
+}
+
+// Maps
+@sizes: {
+    mobile: 320px;
+    tablet: 768px;
+    desktop: 1024px;
+}
+
+.navbar {
+    display: block;
+    padding: 30px;
+    background-color: rgb(42, 165, 69);
+    @media (min-width: @sizes[tablet]) {
+      display: inline-block;
+    }
+}
+
+//
+#library() {
+    .colors() {
+      primary: green;
+      secondary: blue;
+    }
+}
+
+#library() {
+    .colors() { primary: grey; }
+}
+
+.button2 {
+    color: #library.colors[primary];
+    border-color: #library.colors[secondary];
+}
+
+/*
+    .button {
+        color: grey;
+        border-color: blue;
+    }
+*/
