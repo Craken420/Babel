@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const indexInput = './src/index.html';
 const indexOutput = 'index.html';
@@ -56,6 +57,10 @@ const webpackInitConfig = {
             title: 'Development',
             filename: indexOutput,
             template: indexInput
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+            chunkFilename: '[id].css'
         })
     ]
 };
