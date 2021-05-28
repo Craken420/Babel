@@ -31,7 +31,7 @@ const webpackInitConfig = {
                 use: ['ts-loader']
             },
             {
-                test: /\.css/,
+                test: /\.css$/,
                 exclude: /node_modules/,
                 use: [
                   'style-loader',
@@ -39,6 +39,16 @@ const webpackInitConfig = {
                   'postcss-loader',
                 ],
             },
+            {
+                test: /\.less$/,
+                exclude: /node_modules/,
+                use: [
+                  'style-loader',
+                  'css-loader',
+                  'postcss-loader',
+                  'less-loader'
+                ]
+            }
         ]
     },
     plugins: [
